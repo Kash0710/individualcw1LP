@@ -34,3 +34,75 @@ header button {
     position: absolute;
     border-radius: 20px;
 }
+
+.searchAndSort {
+    top: 40%;
+}
+
+.pageHeader {
+    text-align: center;
+}
+
+.lesson {
+    margin-left: 15%;
+    margin-top: 2%;
+    position: relative;
+    width: 300px;
+    height: 200px;
+    border: 2px solid black;
+    border-radius: 20px;
+    flex-direction: row;
+}
+
+.lesson h2 {
+    font-size: 20px;
+}
+
+.lesson h2,
+.lesson p {
+    position: relative;
+    display: flex;
+    margin-left: 10px;
+}
+
+.lessonImage {
+    position: absolute;
+    display: flex;
+    margin-left: 180px;
+    margin-top: 20px;
+    width: 100px;
+    height: 100px;
+}
+
+.lesson button {
+    display: flex;
+    margin-left: 180px;
+    background-color: blue;
+    color: white;
+    border-color: blue;
+}
+
+.fa-plus {
+    position: relative;
+    top: 3px;
+    margin-right: 3px;
+}
+
+.cartProducts {
+    padding: 10px;
+    width: 180px;
+
+    margin-left: 200px;
+}
+
+.basket {
+    width: 320px;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 20px;
+    margin-left: 200px;
+}
+
+.inputField {
+    margin-left: 28px;
+}
