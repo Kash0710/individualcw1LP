@@ -35,4 +35,22 @@
                     Search:
                     <input type="text" class="searchInput" v-model="searchTerm" />
                 </p>
-            </div>
+      </div>
+            <!-- Creates radio buttons for sorting products using Vue.js two way binding -->
+            <div class="searchAndSort">
+                <p><input type="radio" id="priceLowHigh" value="priceLowHigh" v-model="sortStyle">
+                    <label for="priceLowHigh">Price: Low to High</label>
+                </p>
+                <p>
+                    <input type="radio" id="priceHighLow" value="priceHighLow" v-model="sortStyle">
+                    <label for="priceHighLow">Price : High to Low</label>
+                </p>
+                <p>
+                    <input type="radio" id="aToZ" value="aToZ" v-model="sortStyle">
+                    <label for="aToZ">Name: A to Z</label>
+                </p>
+                <p>
+                    <input type="radio" id="zToA" value="zToA" v-model="sortStyle">
+                    <label for="zToA">Name: Z to A</label>
+                </p>
+     </div>
