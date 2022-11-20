@@ -78,4 +78,28 @@
             <button v-html="lessonButton" disabled v-else></button>
         </div>
 </div>
+     <!-- Sorts  by price low to high -->
+     <div v-else-if="sortStyle === 'priceLowHigh'">
+        <div v-for="product in sortedProducts" class="lesson">
+            <img class="lessonImage" v-bind:src="product.image">
+            <h2>Subject: {{product.name}}</h2>
+            <p>Location: {{product.location}}</p>
+            <p>Price: £{{product.price}}</p>
+            <p>Spaces available: {{product.spaces}}</p>
+            <button v-html="lessonButton" v-on:click="addToCart(product)" v-if="canAdd(product)"></button>
+            <button v-html="lessonButton" disabled v-else></button>
+        </div>
+ </div>
+    <!-- Sorts by price high to low -->
+    <div v-else-if="sortStyle === 'priceHighLow'">
+        <div v-for="product in sortedProductsHigh" class="lesson">
+            <img class="lessonImage" v-bind:src="product.image">
+            <h2>Subject: {{product.name}}</h2>
+            <p>Location: {{product.location}}</p>
+            <p>Price: £{{product.price}}</p>
+            <p>Spaces available: {{product.spaces}}</p>
+            <button v-html="lessonButton" v-on:click="addToCart(product)" v-if="canAdd(product)"></button>
+            <button v-html="lessonButton" disabled v-else></button>
+        </div>
+</div>
  <!-- K-->
