@@ -102,30 +102,29 @@
             <button v-html="lessonButton" disabled v-else></button>
         </div>
 </div>
- <!-- K-->
-    <!-- Sorts by name A to Z -->
-    <div v-else-if="sortStyle === 'aToZ'">
-        <div v-for="product in alphabetProducts" class="lesson">
-            <img class="lessonImage" v-bind:src="product.image">
-            <h2>Subject: {{product.name}}</h2>
-            <p>Location: {{product.location}}</p>
-            <p>Price: £{{product.price}}</p>
-            <p>Spaces available: {{product.spaces}}</p>
-            <button v-html="lessonButton" v-on:click="addToCart(product)" v-if="canAdd(product)"></button>
-            <button v-html="lessonButton" disabled v-else></button>
-        </div>
+   <!-- Sorts by name A to Z -->
+   <div v-else-if="sortStyle === 'aToZ'">
+    <div v-for="product in alphabetProducts" class="lesson">
+        <img class="lessonImage" v-bind:src="product.image">
+        <h2>Subject: {{product.name}}</h2>
+        <p>Location: {{product.location}}</p>
+        <p>Price: £{{product.price}}</p>
+        <p>Spaces available: {{product.spaces}}</p>
+        <button v-html="lessonButton" v-on:click="addToCart(product)" v-if="canAdd(product)"></button>
+        <button v-html="lessonButton" disabled v-else></button>
     </div>
-    <!-- Sorts by name Z to A -->
-    <div v-else-if="sortStyle === 'zToA'">
-        <div v-for="product in alphabetProductsZ" class="lesson">
-            <img class="lessonImage" v-bind:src="product.image">
-            <h2>Subject: {{product.name}}</h2>
-            <p>Location: {{product.location}}</p>
-            <p>Price: £{{product.price}}</p>
-            <p>Spaces available: {{product.spaces}}</p>
-            <button v-html="lessonButton" v-on:click="addToCart(product)" v-if="canAdd(product)"></button>
-            <button v-html="lessonButton" disabled v-else></button>
-        </div>
+</div>
+<!-- Sorts by name Z to A -->
+<div v-else-if="sortStyle === 'zToA'">
+    <div v-for="product in alphabetProductsZ" class="lesson">
+        <img class="lessonImage" v-bind:src="product.image">
+        <h2>Subject: {{product.name}}</h2>
+        <p>Location: {{product.location}}</p>
+        <p>Price: £{{product.price}}</p>
+        <p>Spaces available: {{product.spaces}}</p>
+        <button v-html="lessonButton" v-on:click="addToCart(product)" v-if="canAdd(product)"></button>
+        <button v-html="lessonButton" disabled v-else></button>
     </div>
+</div>
 </div>
 <!-- K-->
